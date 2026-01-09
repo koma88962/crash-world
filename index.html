@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ボタンで表示切り替え</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>墜落世界サマリー</h3>
+
+    <div class="button-area">
+        <button onclick="showContent(1)">墜落世界とは</button>
+        <button onclick="showContent(2)">遊び方</button>
+        <button onclick="showContent(3)">アイテム一覧</button>
+        <button onclick="showContent(4)">種族・役職</button>
+    </div>
+
+    <div class="content-area">
+        <div id="content1" class="content">
+            <p>墜落世界とは</p>
+            <p id="overview"></p>
+        </div>
+        <div id="content2" class="content">
+            <p>遊び方</p>
+            <p id="rule"></p>
+        </div>
+        <div id="content3" class="content">
+            <p>アイテム一覧</p>
+                <div id="itemDescription" style="margin-top:10px;">
+                行をクリックすると、該当行アイテムの説明がここに表示されます
+            </div>
+            <div class="table-wrapper">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>名称</th>
+                            <th>荷重</th>
+                            <th>故障段階</th>
+                            <th>価格</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="content4" class="content">
+            <p>役職・職能</p>
+            <p id="positionAndSkill"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
