@@ -305,6 +305,7 @@ function item() {
     // tr はここで tbody に追加
     tbody.appendChild(tr);
   }
+  
 }
 
 function positionAndSkill(){
