@@ -61,6 +61,711 @@ button:active {
 }
 
 /* =========================
+   キャラクター創造の流れ
+========================= */
+#flowTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#flowTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#flowTitle:active {
+    background-color: #cce5ff;
+}
+
+#flowTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#flowTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#flowTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   基本能力値
+========================= */
+#basicAbilitiesTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#basicAbilitiesTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#basicAbilitiesTitle:active {
+    background-color: #cce5ff;
+}
+
+#basicAbilitiesTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#basicAbilitiesTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#basicAbilitiesTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   出身
+========================= */
+#birthplaceTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#birthplaceTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#birthplaceTitle:active {
+    background-color: #cce5ff;
+}
+
+#birthplaceTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#birthplaceTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#birthplaceTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   科族
+========================= */
+#scienceTribeTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#scienceTribeTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#scienceTribeTitle:active {
+    background-color: #cce5ff;
+}
+
+#scienceTribeTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#scienceTribeTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#scienceTribeTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   街族
+========================= */
+#cityTribeTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#cityTribeTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#cityTribeTitle:active {
+    background-color: #cce5ff;
+}
+
+#cityTribeTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#cityTribeTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#cityTribeTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   擬人
+========================= */
+#mimicryHumanTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#mimicryHumanTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#mimicryHumanTitle:active {
+    background-color: #cce5ff;
+}
+
+#mimicryHumanTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#mimicryHumanTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#mimicryHumanTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   欠族
+========================= */
+#lackTribeTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#lackTribeTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#lackTribeTitle:active {
+    background-color: #cce5ff;
+}
+
+#lackTribeTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#lackTribeTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#lackTribeTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   人畜
+========================= */
+#humanLivestockTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#humanLivestockTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#humanLivestockTitle:active {
+    background-color: #cce5ff;
+}
+
+#humanLivestockTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#humanLivestockTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#humanLivestockTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   獣族
+========================= */
+#beastTribeTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#beastTribeTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#beastTribeTitle:active {
+    background-color: #cce5ff;
+}
+
+#beastTribeTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#beastTribeTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#beastTribeTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   職能
+========================= */
+#abilityTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#abilityTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#abilityTitle:active {
+    background-color: #cce5ff;
+}
+
+#abilityTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#abilityTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#abilityTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   技術
+========================= */
+#skillDepartmentTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#skillDepartmentTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#skillDepartmentTitle:active {
+    background-color: #cce5ff;
+}
+
+#skillDepartmentTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#skillDepartmentTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#skillDepartmentTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   経理
+========================= */
+#accountingDepartmentTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#accountingDepartmentTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#accountingDepartmentTitle:active {
+    background-color: #cce5ff;
+}
+
+#accountingDepartmentTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#accountingDepartmentTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#accountingDepartmentTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   厚生
+========================= */
+#welfareDepartmentTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#welfareDepartmentTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#welfareDepartmentTitle:active {
+    background-color: #cce5ff;
+}
+
+#welfareDepartmentTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#welfareDepartmentTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#welfareDepartmentTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   資材
+========================= */
+#materialsDepartmentTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#materialsDepartmentTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#materialsDepartmentTitle:active {
+    background-color: #cce5ff;
+}
+
+#materialsDepartmentTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#materialsDepartmentTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#materialsDepartmentTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   渉外
+========================= */
+#publicRelationsDepartmentTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#publicRelationsDepartmentTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#publicRelationsDepartmentTitle:active {
+    background-color: #cce5ff;
+}
+
+#publicRelationsDepartmentTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#publicRelationsDepartmentTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#publicRelationsDepartmentTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   保安
+========================= */
+#securityDepartmentTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#securityDepartmentTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#securityDepartmentTitle:active {
+    background-color: #cce5ff;
+}
+
+#securityDepartmentTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#securityDepartmentTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#securityDepartmentTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   変異
+========================= */
+#mutationTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#mutationTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#mutationTitle:active {
+    background-color: #cce5ff;
+}
+
+#mutationTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#mutationTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#mutationTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   能力値
+========================= */
+#abilitiesDescriptionTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#abilitiesDescriptionTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#abilitiesDescriptionTitle:active {
+    background-color: #cce5ff;
+}
+
+#abilitiesDescriptionTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#abilitiesDescriptionTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#abilitiesDescriptionTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   カンパニー創造の流れ
+========================= */
+#companyCreateFlowTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#companyCreateFlowTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#companyCreateFlowTitle:active {
+    background-color: #cce5ff;
+}
+
+#companyCreateFlowTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#companyCreateFlowTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#companyCreateFlowTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   社長を選ぶ
+========================= */
+#choosePresidentTitle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#choosePresidentTitle:hover {
+    background-color: #e6f2ff;
+}
+
+#choosePresidentTitle:active {
+    background-color: #cce5ff;
+}
+
+#choosePresidentTitle.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+#choosePresidentTitle .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 6px;
+    transition: transform 0.2s;
+}
+
+#choosePresidentTitle.active .arrow {
+    transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* =========================
+   テキスト開閉
+========================= */
+.hidden { display: none; }
+
+/* =========================
    アイテム説明欄
 ========================= */
 #itemDescription {
@@ -98,11 +803,11 @@ th {
 }
 
 /* 行クリック */
-#tableBody tr {
+#tBodyItem tr {
     cursor: pointer;
 }
 
-#tableBody tr:hover {
+#tBodyItem tr:hover {
     background-color: #e6f2ff;
 }
 
@@ -120,7 +825,7 @@ th {
     }
 
     /* ボタンを縦並び */
-    .button-area {
+    .buttonArea {
         flex-direction: column;
     }
 
