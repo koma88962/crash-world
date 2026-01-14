@@ -1,4 +1,4 @@
-function showContent(number) {
+function showContent(name) {
 
   // すべて非表示にする
   const contents = document.querySelectorAll(".content");
@@ -7,27 +7,34 @@ function showContent(number) {
   });
 
   // 指定されたコンテンツだけ表示
-  const target = document.getElementById("content" + number);
+  const target = document.getElementById("content" + name);
   if (target) {
     target.style.display = "block";
   }
 
-  if (number == 1) {
+  if (name == "Overview") {
     overview();
-  }
-   else if (number == 2) {
+  } else if (name == "Rule") {
     rule();
-  } else if (number == 3) {
+  } else if (name == "Create") {
+    create();
+  } else if (name == "General") {
+    general();
+  } else if (name == "Combat") {
+    combat();
+  } else if (name == "Item") {
     item();
-  } else if (number == 4){
-    positionAndSkill();
+  } else if (name == "Skill"){
+    skill();
   }
 }
 
+// 墜落世界とは（概要）
 function overview() {
   document.getElementById("overview").textContent = "墜落した巨大飛行船の残骸世界を舞台に、プレイヤーが生存者となり、資源を管理し、他の生存者と交流・対立しながら生き残ることを目指すシステム。"
 }
 
+// 遊び方
 function rule() {
   document.getElementById("rule").innerHTML =
     "墜落船回収業者（PC）を作成する<br>"
@@ -39,6 +46,16 @@ function rule() {
        + " → 精算";
 }
 
+// 創造サマリー　ボタン処理
+function createSummeryText(str){
+  const text = document.getElementById(str + "Text");
+  const title = document.getElementById(str + "Title");
+
+  text.classList.toggle("hidden");
+  title.classList.toggle("active");
+}
+
+// アイテム一覧
 function item() {
   const data = [
     ["01",
@@ -281,7 +298,7 @@ function item() {
     ],
   ];
 
-  const tbody = document.getElementById("tableBody");
+  const tbody = document.getElementById("tBodyItem");
   const descriptionDiv = document.getElementById("itemDescription");
 
   // 再表示対策（重要）
@@ -305,7 +322,6 @@ function item() {
     // tr はここで tbody に追加
     tbody.appendChild(tr);
   }
-  
 }
 
 function positionAndSkill(){
