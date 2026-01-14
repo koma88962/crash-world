@@ -11,24 +11,260 @@
 <body>
     <h3>墜落世界サマリー</h3>
 
-    <div class="button-area">
-        <button onclick="showContent(1)">墜落世界とは</button>
-        <button onclick="showContent(2)">遊び方</button>
-        <button onclick="showContent(3)">アイテム一覧</button>
-        <button onclick="showContent(4)">種族・役職</button>
+    <div class="buttonArea">
+        <button onclick="showContent('Overview')">墜落世界とは</button>
+        <button onclick="showContent('Rule')">遊び方</button>
+        <button onclick="showContent('Create')">創造サマリー</button>
+        <button onclick="showContent('General')">一般サマリー</button>
+        <button onclick="showContent('Combat')">戦闘サマリー</button>
+        <button onclick="showContent('Item')">アイテム一覧</button>
+        <button onclick="showContent('Skill')">種族・役職</button>
     </div>
 
-    <div class="content-area">
-        <div id="content1" class="content">
-            <p>墜落世界とは</p>
+    <div class="contentArea">
+        <div id="contentOverview" class="content">
+            <h4>墜落世界とは</h4>
             <p id="overview"></p>
         </div>
-        <div id="content2" class="content">
-            <p>遊び方</p>
+        <div id="contentRule" class="content">
+            <h4>遊び方</h4>
             <p id="rule"></p>
         </div>
-        <div id="content3" class="content">
-            <p>アイテム一覧</p>
+        <div id="contentCreate" class="content">
+            <h4>創造サマリー</h4>
+            <p>キャラクター作成についてのあれこれです。</p>
+            <div id="divFlow">
+                <button id="flowTitle" onclick="createSummeryText('flow')">
+                    <span class="arrow">▶</span>
+                    キャラクター創造の流れ
+                </button>
+                <p id="flowText" class="hidden">
+                    ① 出身を決める<br>
+                    ② 変異を決める<br>
+                    ③ 名前を決める<br>
+                    ④ 職能を決める<br>
+                    ⑤ 能力値と変異を社員証に写す
+                </p>
+            </div>
+            <div id="divBasicAbilities">
+                <button id="basicAbilitiesTitle" onclick="createSummeryText('basicAbilities')">
+                    <span class="arrow">▶</span>
+                    基本能力値
+                </button>
+                <p id="basicAbilitiesText" class="hidden">
+                    【戦闘移動】2<br>
+                    【攻撃】4<br>
+                    【防御】2<br>
+                    【逃走】2<br>
+                    【汚染耐性】1<br>
+                    【広域移動】1<br>
+                    【発見】2<br>
+                    【解除】2<br>
+                    【鑑定】2<br>
+                    【交渉】2<br>
+                    【生命点】6<br>
+                    【荷重上限】4
+                </p>
+            </div>
+            <div id="divBirthplace">
+                <button id="birthplaceTitle" onclick="createSummeryText('birthplace')">
+                    <span class="arrow">▶</span>
+                    出身
+                </button>
+                <div id="birthplaceText" class="hidden">
+                    <div id="divScienceTribe">
+                        <button id="scienceTribeTitle" onclick="createSummeryText('scienceTribe')">
+                            <span class="arrow">▶</span>
+                            科族
+                        </button>
+                        <p id="scienceTribeText" class="hidden">
+                            追加能力値：【鑑定】+ 2　【交渉】+ 2<br>
+                            変異表：超常能力1　自由1<br>
+                            特殊能力「絶対鑑定」<br>
+                        </p>
+                    </div>
+                    <div id="divCityTribe">
+                        <button id="cityTribeTitle" onclick="createSummeryText('cityTribe')">
+                            <span class="arrow">▶</span>
+                            街族
+                        </button>
+                        <p id="cityTribeText" class="hidden">
+                            追加能力値：【攻撃】+ 2　【荷重上限】+ 1<br>
+                            変異表：自由2<br>
+                            特殊能力「幸運の星」<br>
+                        </p>
+                    </div>
+                    <div id="divMimicryHuman">
+                        <button id="mimicryHumanTitle" onclick="createSummeryText('mimicryHuman')">
+                            <span class="arrow">▶</span>
+                            擬人
+                        </button>
+                        <p id="mimicryHumanText" class="hidden">
+                            追加能力値：【戦闘移動】+ 1　【防御】+ 2<br>
+                            変異表：器官変成1　自由1<br>
+                            特殊能力「机器安装」<br>
+                        </p>
+                    </div>
+                    <div id="divLackTribe">
+                        <button id="lackTribeTitle" onclick="createSummeryText('lackTribe')">
+                            <span class="arrow">▶</span>
+                            欠族
+                        </button>
+                        <p id="lackTribeText" class="hidden">
+                            追加能力値：【発見】+ 2　【解除】+ 2<br>
+                            変異表：超常能力2<br>
+                            特殊能力「欠損補完」<br>
+                        </p>
+                    </div>
+                    <div id="divHumanLivestock">
+                        <button id="humanLivestockTitle" onclick="createSummeryText('humanLivestock')">
+                            <span class="arrow">▶</span>
+                            人畜
+                        </button>
+                        <p id="humanLivestockText" class="hidden">
+                            追加能力値：【逃走】+ 2　【生命点】+ 4<br>
+                            変異表：自由2<br>
+                            特殊能力「歪曲耐性」<br>
+                        </p>
+                    </div>
+                    <div id="divBeastTribe">
+                        <button id="beastTribeTitle" onclick="createSummeryText('beastTribe')">
+                            <span class="arrow">▶</span>
+                            獣族
+                        </button>
+                        <p id="beastTribeText" class="hidden">
+                            追加能力値：【汚染耐性】+ 1　【広域移動】+ 1<br>
+                            変異表：器官変成2<br>
+                            特殊能力「祖靈変異」<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="divAbility">
+                <button id="abilityTitle" onclick="createSummeryText('ability')">
+                    <span class="arrow">▶</span>
+                    職能
+                </button>
+                <div id="abilityText" class="hidden">
+                    <div id="divSkillDepartment">
+                        <button id="skillDepartmentTitle" onclick="createSummeryText('skillDepartment')">
+                            <span class="arrow">▶</span>
+                            技術
+                        </button>
+                        <p id="skillDepartmentText" class="hidden">
+                            追加能力値：【発見】+ 2　【解除】+ 2<br>
+                        </p>
+                    </div>
+                    <div id="divAccountingDepartment">
+                        <button id="accountingDepartmentTitle" onclick="createSummeryText('accountingDepartment')">
+                            <span class="arrow">▶</span>
+                            経理
+                        </button>
+                        <p id="accountingDepartmentText" class="hidden">
+                            追加能力値：【戦闘移動】+ 1　【広域移動】+ 1<br>
+                        </p>
+                    </div>
+                    <div id="divWelfareDepartment">
+                        <button id="welfareDepartmentTitle" onclick="createSummeryText('welfareDepartment')">
+                            <span class="arrow">▶</span>
+                            厚生
+                        </button>
+                        <p id="welfareDepartmentText" class="hidden">
+                            追加能力値：【汚染耐性】+ 1　【逃走】+ 2<br>
+                        </p>
+                    </div>
+                    <div id="divMaterialsDepartment">
+                        <button id="materialsDepartmentTitle" onclick="createSummeryText('materialsDepartment')">
+                            <span class="arrow">▶</span>
+                            資材
+                        </button>
+                        <p id="materialsDepartmentText" class="hidden">
+                            追加能力値：【鑑定】+ 2　【荷重上限】+ 1<br>
+                        </p>
+                    </div>
+                    <div id="divPublicRelationsDepartment">
+                        <button id="publicRelationsDepartmentTitle" onclick="createSummeryText('publicRelationsDepartment')">
+                            <span class="arrow">▶</span>
+                            渉外
+                        </button>
+                        <p id="publicRelationsDepartmentText" class="hidden">
+                            追加能力値：【交渉】+ 2　【生命点】+ 4<br>
+                        </p>
+                    </div>
+                    <div id="divSecurityDepartment">
+                        <button id="securityDepartmentTitle" onclick="createSummeryText('securityDepartment')">
+                            <span class="arrow">▶</span>
+                            保安
+                        </button>
+                        <p id="securityDepartmentText" class="hidden">
+                            追加能力値：【攻撃】+ 2　【防御】+ 2<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="divMutation">
+                <button id="mutationTitle" onclick="createSummeryText('mutation')">
+                    <span class="arrow">▶</span>
+                    変異
+                </button>
+                <p id="mutationText" class="hidden">
+                    PC作成時の変異数は2つ、欠族のみが4つになる。PCが獲得できる変異は合計6つまで。<br>
+                    これには得てしまうかもしれない身体欠損変異も含まれる。ただし欠族の特殊能力による変異は勘定に入れない。<br>
+                </p>
+            </div>
+            <div id="divAbilitiesDescription">
+                <button id="abilitiesDescriptionTitle" onclick="createSummeryText('abilitiesDescription')">
+                    <span class="arrow">▶</span>
+                    能力値
+                </button>
+                <p id="abilitiesDescriptionText" class="hidden">
+                    【戦闘移動】：戦闘中に移動できる距離<br>
+                    【攻撃】：攻撃を当てる能力<br>
+                    【防御】：攻撃を防ぐ能力<br>
+                    【逃走】：戦闘から逃げる能力<br>
+                    【汚染耐性】：環境汚染に対する抵抗力<br>
+                    【広域移動】：野外で移動できる距離<br>
+                    【発見】：何かを発見する能力<br>
+                    【解除】：罠や災害を無力化する能力<br>
+                    【鑑定】：物の値段や使い方を知る能力<br>
+                    【交渉】：人間と話し合う能力<br>
+                    【生命点】：これが0になると行動不能に<br>
+                    【荷重上限】：どれだけの物を持てるか
+                </p>
+            </div>
+            <div id="divCompanyCreateFlow">
+                <button id="companyCreateFlowTitle" onclick="createSummeryText('companyCreateFlow')">
+                    <span class="arrow">▶</span>
+                    カンパニー創造の流れ
+                </button>
+                <p id="companyCreateFlowText" class="hidden">
+                    ①社長を選ぶ<br>
+                    ②資金を得る
+                </p>
+            </div>
+            <div id="divChoosePresident">
+                <button id="choosePresidentTitle" onclick="createSummeryText('choosePresident')">
+                    <span class="arrow">▶</span>
+                    社長を選ぶ
+                </button>
+                <p id="choosePresidentText" class="hidden">
+                    ●社長<br>
+                    分類：役職　発動：常時<br>
+                    購入費：0EU　維持費：0EU<br>
+                    他の役職と同時に獲得することはできない。カンパニー内の任意の1人が持つ役職と同じ役職として扱うほか、社内の意思決定の最終権限を持つ。<br>
+                </p>
+            </div>
+        </div>
+        <div id="contentGeneral" class="content">
+            <h4>一般サマリー</h4>
+            <p>一般的なことについてのあれこれです。</p>
+        </div>
+        <div id="contentCombat" class="content">
+            <h4>戦闘サマリー</h4>
+            <p>戦闘についてのあれこれです。</p>
+        </div>
+        <div id="contentItem" class="content">
+            <h4>アイテム一覧</h4>
                 <div id="itemDescription">
                 行をクリックすると、該当行アイテムの説明がここに表示されます
             </div>
@@ -43,14 +279,14 @@
                             <th>価格</th>
                         </tr>
                     </thead>
-                    <tbody id="tableBody">
+                    <tbody id="tBodyItem">
                     </tbody>
                 </table>
             </div>
         </div>
-        <div id="content4" class="content">
-            <p>能力値</p>
-            <p id="positionAndSkill"></p>
+        <div id="contentSkill" class="content">
+            <h4>能力値</h4>
+            <p id="skill"></p>
         </div>
     </div>
 
